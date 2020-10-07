@@ -87,7 +87,7 @@ class UrlHelper {
 
 		if (filter_var($url_filter_var, FILTER_VALIDATE_URL) === false)
 			return false;
-
+/**
 		if ($extended_filtering) {
 			if (!in_array($tokens['port'], [80, 443, '']))
 				return false;
@@ -95,7 +95,7 @@ class UrlHelper {
 			if (strtolower($tokens['host']) == 'localhost' || $tokens['host'] == '::1' || strpos($tokens['host'], '127.') === 0)
 				return false;
 		}
-
+*/
 		return $url;
 	}
 
